@@ -23,4 +23,4 @@ Leading and trailing whitespace is striped from the name, command and the pasted
 
 ## Why that name?
 
-Felt hungry thinking a name, "cliplunch" came to my mind, Bon Appetit.
+Felt hungry thinking a name, "cliplunch" came to my mind, Bon Appétit.
