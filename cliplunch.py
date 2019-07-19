@@ -24,6 +24,6 @@ def parse_config(conf: typing.IO[str]) -> dict:
             pass
     return associations
 
-def launch(command: str) -> None:
-    subprocess.Popen(command + ' ' + shlex.quote(pyperclip.paste().strip()), stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
+def launch(command: str, stderr: typing.IO[str]=subprocess.DEVNULL) -> None:
+    subprocess.Popen(command + ' ' + shlex.quote(pyperclip.paste().strip()), stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=stderr, shell=True)
 

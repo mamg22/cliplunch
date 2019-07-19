@@ -13,4 +13,6 @@ for index, name in enumerate(assoc, 1):
 
 selection = int(input("Enter your choice: "))
 
-cliplunch.launch(assoc[options[selection]])
+stderr = open("/tmp/cliplunch.err", "w+") 
+
+cliplunch.launch(assoc[options[selection]], )

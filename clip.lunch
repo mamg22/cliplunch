@@ -1,5 +1,5 @@
 Print clipboard | notify-send "Your clipboard is:"
 Print Urgent    | notify-send -u critical "Your clipboard is:"
 Print Meh       | notify-send -u low "Your clipboard is:"
-MPV 240         | mpv --ytdl-format='worstvideo[height>=240][format!*=av01]+worstaudio/worst' --keep-open
-MPV 360         | mpv --ytdl-format='worstvideo[height>=360][format!*=av01]+worstaudio/worst' --keep-open
+MPV 240         | mpv --ytdl-format='worstvideo[height>=240][vcodec!*=av01]+worstaudio/worst' --keep-open
+MPV 360         | mpv --ytdl-format='worstvideo[height>=360][vcodec!*=av01]+worstaudio/worst' --keep-open
