@@ -1,0 +1,4 @@
+Send A  | notify-send "A"
+Send B  | notify-send "B"
+MPV 240 | mpv --ytdl-format='worstvideo[height<=240]+worstaudio/worst' --keep-open
+MPV 360 | mpv --ytdl-format='worstvideo[height<=360]+worstaudio/worst' --keep-open
