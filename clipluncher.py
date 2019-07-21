@@ -15,4 +15,4 @@ selection = int(input("Enter your choice: "))
 
 stderr = open("/tmp/cliplunch.err", "w+") 
 
-cliplunch.launch(assoc[options[selection]], )
+cliplunch.launch(assoc[options[selection]], stderr)

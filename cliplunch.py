@@ -8,10 +8,9 @@ import pyperclip
 
 class launch_item:
     # not used still, need to decide a config format
-    def __init__(self, name, command, index, options={}):
+    def __init__(self, name, command, options={}):
         self.name = name
         self.command = command
-        self.index = index
         self.options = options
 
 def parse_config(conf: typing.IO[str]) -> dict:
