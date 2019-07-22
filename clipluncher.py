@@ -4,19 +4,18 @@ from typing import List
 
 import cliplunch
 
-conf_file = open("clip.lunch", "r")
-assoc = cliplunch.parse_config(conf_file)
+with open("clip.lunch", "r") as conf_file:
+    config = cliplunch.parse_config(conf_file)
 
-for i in range(len(assoc)):
-    assoc[i].data["index"] = i + 1
-    print(f"{assoc[i].data['index']}. {assoc[i].name}")
+selections = {}
+for index, launch_item in enumerate(config, 1):
+    selections[str(index)] = launch_item
+    print(f"{index}. {launch_item.name}")
 
-selection = int(input("Enter your choice: "))
-
-def find_by_index(index:int, item_list:List[cliplunch.Launch_item]) -> cliplunch.Launch_item:
-    for elem in item_list:
-        if elem.data["index"] == index:
-            return elem
-
-stderr = open("/tmp/cliplunch.err", "w+") 
-cliplunch.launch(find_by_index(selection, assoc), stderr)
+selection = input("Enter your choice: ")
+item = selections.get(selection)
+if item is None:
+    print("Invalid Option")
+else:
+    with open("/tmp/cliplunch.err", "w+") as stderr:
+        item.launch(stderr)
