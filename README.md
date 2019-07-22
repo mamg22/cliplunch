@@ -4,6 +4,8 @@ Cliplunch is a library and a series of programs that call a program with your cl
 
 Clipluncher is a simple implementation of a command line luncher.
 
+rofi-clipluncher is a luncher designed to be used as a rofi modi.
+
 ## Config files
 
 Cliplunch configuration files (just for now, may change later) follow the format:
@@ -20,6 +22,7 @@ Leading and trailing whitespace is striped from the name, command and the pasted
 
 * Allow the clipboard paste be placed anywhere in the command, not just at the end
 * Decide on a config file format.
+* Allow running a fallback program on failure (e.g. notification when mpv can play given video)
 
 ## Why that name?
 
