@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
 import sys
+from os.path import expanduser
 
 import cliplunch
 
-with open("clip.lunch", "r") as conf_file:
+with open(expanduser("~/.config/cliplunch/clip.lunch"), "r") as conf_file:
     config = cliplunch.parse_config(conf_file)
 
 selections = {}
