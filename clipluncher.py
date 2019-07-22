@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-from typing import List
-
 import cliplunch
 
 with open("clip.lunch", "r") as conf_file:
