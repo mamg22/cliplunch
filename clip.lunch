@@ -1,5 +1,11 @@
+# Testing
 Print clipboard | notify-send "Your clipboard is:"
-Print Urgent    | notify-send -u critical "Your clipboard is:"
-Print Meh       | notify-send -u low "Your clipboard is:"
-mpv 240         | mpv --ytdl-format='worstvideo[height>=240][vcodec!*=av01]+worstaudio/worst' --keep-open
-mpv 360         | mpv --ytdl-format='worstvideo[height>=360][vcodec!*=av01]+worstaudio/worst' --keep-open
+Print Urgent    | notify-send -u critical "YOUR CLIPBOARD IS:"
+Print Meh       | notify-send -u low "Your clipboard looks kinda like:"
+# Video 
+mpv 144         | mpv --ytdl-format='worstvideo[height>=144][vcodec!*=av01][vcodec*=vp9][vcodec*=avc1]+worstaudio/worst' --keep-open --force-window
+mpv 240         | mpv --ytdl-format='worstvideo[height>=240][vcodec!*=av01][vcodec*=vp9][vcodec*=avc1]+worstaudio/worst' --keep-open --force-window
+mpv 360         | mpv --ytdl-format='worstvideo[height>=360][vcodec!*=av01][vcodec*=vp9][vcodec*=avc1]+worstaudio/worst' --keep-open --force-window
+mpv audio       | mpv --ytdl-format='bestaudio' --keep-open --force-window
+# Images
+feh             | feh -g 640x480

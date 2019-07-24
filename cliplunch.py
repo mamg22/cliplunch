@@ -20,6 +20,8 @@ class LaunchItem:
 def parse_config(conf):
     associations = []
     for line in conf:
+        if line.startswith("#"):
+            continue
         sections = [ section.strip()
                      for section in line.split("|", 1) 
                      if section != ""]
