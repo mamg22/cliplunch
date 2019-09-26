@@ -32,4 +32,5 @@ Many things you can do:
 * Copy a video URL, and download it to your video directory using `youtube-dl` after picking a video resolution.
 * Don't like a web video player? Play it in `mpv`, `mplayer` or whatever you like.
 * Need to see an image, but want it outside your browser? Open it in `feh`.
+* Want to download that image to `~/memes-to-repost-in-a-week/`? Do it easily.
 * Found some interesting quote you want to keep? Append it to your `wonderful-quotes-i-found-in-the-internet.txt` file.
