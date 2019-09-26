@@ -2,10 +2,12 @@
 Print clipboard | notify-send "Your clipboard is:"
 Print Urgent    | notify-send -u critical "YOUR CLIPBOARD IS:"
 Print Meh       | notify-send -u low "Your clipboard looks kinda like:"
-# Video 
-mpv 144         | mpv --ytdl-format='worstvideo[height>=144][vcodec!*=av01][vcodec*=vp9][vcodec*=avc1]+worstaudio/worst' --keep-open --force-window
-mpv 240         | mpv --ytdl-format='worstvideo[height>=240][vcodec!*=av01][vcodec*=vp9][vcodec*=avc1]+worstaudio/worst' --keep-open --force-window
-mpv 360         | mpv --ytdl-format='worstvideo[height>=360][vcodec!*=av01][vcodec*=vp9][vcodec*=avc1]+worstaudio/worst' --keep-open --force-window
-mpv audio       | mpv --ytdl-format='bestaudio' --keep-open --force-window
+# Video with a lot of fallbacks
+mpv 144         | mpv --ytdl-format='(worstvideo[vcodec*=vp9]/worstvideo[vcodec*=avc1]/worstvideo)[height>=144]+(worstaudio/bestaudio)/worstvideo+worstaudio/worst' --keep-open --force-window
+mpv 240         | mpv --ytdl-format='(worstvideo[vcodec*=vp9]/worstvideo[vcodec*=avc1]/worstvideo)[height>=240]+(worstaudio/bestaudio)/worstvideo+worstaudio/worst' --keep-open --force-window
+mpv 360         | mpv --ytdl-format='(worstvideo[vcodec*=vp9]/worstvideo[vcodec*=avc1]/worstvideo)[height>=360]+(worstaudio/bestaudio)/worstvideo+worstaudio/worst' --keep-open --force-window
+mpv 480         | mpv --ytdl-format='(worstvideo[vcodec*=vp9]/worstvideo[vcodec*=avc1]/worstvideo)[height>=480]+(worstaudio/bestaudio)/worstvideo+worstaudio/worst' --keep-open --force-window
+mpv worstaudio       | mpv --ytdl-format='worstaudio/bestaudio' --keep-open --force-window
+mpv bestaudio       | mpv --ytdl-format='bestaudio/worstaudio' --keep-open --force-window
 # Images
 feh             | feh -g 640x480
