@@ -23,10 +23,13 @@ Leading and trailing whitespace is striped from the name, command and the pasted
 ## TODO and (possible) future features
 
 * Allow the clipboard paste be placed anywhere in the command, not just at the end
-* Decide on a config file format.
-* Allow running a fallback program on failure (e.g. notification when mpv can play given video)
 * Allow the user to specify a different lunchfile.
 
-## Why that name?
+## Why?
 
-[Started thinking a name, felt hungry, "cliplunch" it is.](https://www.youtube.com/watch?v=B0RPDXt6m1s)
+Many things you can do:
+
+* Copy a video URL, and download it to your video directory using `youtube-dl` after picking a video resolution.
+* Don't like a web video player? Play it in `mpv`, `mplayer` or whatever you like.
+* Need to see an image, but want it outside your browser? Open it in `feh`.
+* Found some interesting quote you want to keep? Append it to your `wonderful-quotes-i-found-in-the-internet.txt` file.
