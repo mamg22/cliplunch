@@ -6,6 +6,8 @@ Clipluncher is a simple implementation of a command line luncher.
 
 rofi-clipluncher is a luncher designed to be used as a rofi modi.
 
+dmenu-clipluncher uses dmenu to provide lunching options.
+
 ## Config files
 
 Cliplunch configuration files (just for now, may change later) follow the format:
